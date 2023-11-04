@@ -52,7 +52,7 @@ function App() {
       <div className='dark:bg-gray-900'>
         <header className="flex items-center fixed
         w-full justify-between 
-        border-b-[1px] bg-white'">
+        border-b-[1px] bg-white dark:bg-gray-900">
           <div className='w-[90px] h-[90px] bg-gradient-to-t from-gray-500 to-gray-900'>
             <a href="/"><img src="./public/Logo_SC.png"
               alt="Le logo de JoOb" className='p-2' /></a>
@@ -73,14 +73,14 @@ function App() {
                 hover:scale-110 transition-all
                 w-8 h-8 text-gray-800 cursor-pointer  dark:text-gray-100'
               onClick={() => setDarkMode(!darkMode)} />
-            <AiOutlineMenu onClick={() => setMobileMenuOpen(true)} className='w-[30px] h-[30px] cursor-pointer lg:hidden ' />
+            <AiOutlineMenu onClick={() => setMobileMenuOpen(true)} className='w-[30px] h-[30px] dark:text-gray-100 cursor-pointer lg:hidden ' />
             <span className="sr-only">Open main menu</span>
           </div>
 
-          <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+          <Dialog as="div" className={`lg:hidden ${darkMode ? "dark" : ""}`} open={mobileMenuOpen} onClose={setMobileMenuOpen}>
             <div className="fixed inset-0 z-50" />
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto dark:bg-gray-900 bg-gray-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div className="flex items-center justify-between">
+            <Dialog.Panel className="fixed border-l- dark:border-gray-100/50 bg-white inset-y-0 right-0 z-50 w-full overflow-y-auto  dark:bg-gray-900 dark:text-gray-100  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div className="flex items-center justify-between ">
                 <a href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">JoOb Company</span>
                   <img
@@ -91,21 +91,21 @@ function App() {
                 </a>
                 <button
                   type="button"
-                  className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                  className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-200/50"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
                   <AiOutlineClose className="h-8 w-12" aria-hidden="true" />
                 </button>
               </div>
-              <div className="mt-6 flow-root">
+              <div className="mt-6 flow-root ">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
                     {menu.map((item) => (
                       <a
                         key={item.name}
                         href={item.url}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
                       >
                         {item.name}
                       </a>
