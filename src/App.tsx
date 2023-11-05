@@ -8,12 +8,14 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import SideBar from './components/SideBar';
 import Skills from './components/Skills';
-
-import { Dialog } from '@headlessui/react'
+import { Dialog, Switch } from '@headlessui/react'
 
 
 
 function App() {
+
+  const [enabled, setEnabled] = useState(false)
+
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -69,10 +71,22 @@ function App() {
           <div className='w-[90px] h-[90px] 
                 bg-white flex justify-center items-center dark:bg-gray-900'
           >
-            <BsFillMoonStarsFill className='lg:block hidden
-                hover:scale-110 transition-all
-                w-8 h-8 text-gray-800 cursor-pointer  dark:text-gray-100'
-              onClick={() => setDarkMode(!darkMode)} />
+            <div className="p-1 lg:block hidden">
+              <Switch
+                checked={enabled}
+                onChange={setEnabled}
+                onClick={() => setDarkMode(!darkMode)}
+                className={`${enabled ? 'bg-gray-100' : 'bg-gray-900'}
+          relative inline-flex h-[19px] w-[32px] shrink-0 cursor-pointer rounded-full border-2 border-gray-900 dark:border-gray-100 transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white/75`}
+              >
+                <span className="sr-only">Use setting</span>
+                <span
+                  aria-hidden="true"
+                  className={`${enabled ? 'translate-x-3 bg-gray-900' : 'translate-x-0 bg-gray-100 dark:border-gray-900 dark:border-4}'}
+            pointer-events-none inline-block h-[15px] w-[15px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+                />
+              </Switch>
+            </div>
             <AiOutlineMenu onClick={() => setMobileMenuOpen(true)} className='w-6 h-6 dark:text-gray-100 cursor-pointer lg:hidden ' />
             <span className="sr-only">Open main menu</span>
           </div>
