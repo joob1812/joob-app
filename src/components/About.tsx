@@ -6,7 +6,7 @@ import Logo_SC from '/Logo_SC.png'
 
 function About() {
     return (
-        <div className='ml-[90px] grid grid-cols-1 md:grid-cols-3'>
+        <div className='ml-[90px] grid grid-cols-1 lg:grid-cols-3'>
             <div className='col-span-2 mt-[90px] '>
                 <div className='px-44 text-center flex flex-col items-center'>
                     <div className='h-[120px] border-r-[1px]' />
@@ -24,7 +24,7 @@ function About() {
                         <div className='w-full border-[1px] mx-4 mt-[-2px]'></div>
                         <div className='w-[20px] h-[7px] bg-yellow-600 rounded-full'></div>
                     </div>
-                    <div className='md:flex md:flex-col md:justify-center px-24'>
+                    <div className='lg:flex lg:flex-col md:justify-center px-24'>
                         <div className='
                 text-center flex flex-col
                 justify-center items-center
@@ -76,7 +76,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div className='hidden md:block'>
+            <div className='hidden lg:block'>
                 <ProgressBar />
                 <ProfilePic />
             </div>

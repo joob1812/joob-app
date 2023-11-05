@@ -73,7 +73,7 @@ function App() {
                 hover:scale-110 transition-all
                 w-8 h-8 text-gray-800 cursor-pointer  dark:text-gray-100'
               onClick={() => setDarkMode(!darkMode)} />
-            <AiOutlineMenu onClick={() => setMobileMenuOpen(true)} className='w-[30px] h-[30px] dark:text-gray-100 cursor-pointer lg:hidden ' />
+            <AiOutlineMenu onClick={() => setMobileMenuOpen(true)} className='w-6 h-6 dark:text-gray-100 cursor-pointer lg:hidden ' />
             <span className="sr-only">Open main menu</span>
           </div>
 
@@ -84,7 +84,7 @@ function App() {
                 <a href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">JoOb Company</span>
                   <img
-                    className="h-8 w-auto"
+                    className="h-8 w-auto hover:scale-110 transition-all"
                     src="./public/Logo_SC.png"
                     alt="Le logo de JoOb"
                   />
@@ -95,7 +95,7 @@ function App() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
-                  <AiOutlineClose className="h-8 w-12" aria-hidden="true" />
+                  <AiOutlineClose className="h-8 w-8 rounded-md hover:bg-gray-100/50 p-1 transition-all" aria-hidden="true" />
                 </button>
               </div>
               <div className="mt-6 flow-root ">
