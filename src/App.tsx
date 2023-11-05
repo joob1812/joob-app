@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { Link, Routes, Route } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import About from './components/About';
@@ -79,7 +78,7 @@ function App() {
                 className={`${enabled ? 'bg-gray-100' : 'bg-gray-900'}
           relative inline-flex h-[19px] w-[32px] shrink-0 cursor-pointer rounded-full border-2 border-gray-900 dark:border-gray-100 transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white/75`}
               >
-                <span className="sr-only">Use setting</span>
+                <span className="sr-only">Thème Sombre</span>
                 <span
                   aria-hidden="true"
                   className={`${enabled ? 'translate-x-3 bg-gray-900' : 'translate-x-0 bg-gray-100 dark:border-gray-900 dark:border-4}'}
@@ -88,7 +87,7 @@ function App() {
               </Switch>
             </div>
             <AiOutlineMenu onClick={() => setMobileMenuOpen(true)} className='w-6 h-6 dark:text-gray-100 cursor-pointer lg:hidden ' />
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">Ouvrir le menu</span>
           </div>
 
           <Dialog as="div" className={`lg:hidden ${darkMode ? "dark" : ""}`} open={mobileMenuOpen} onClose={setMobileMenuOpen}>
