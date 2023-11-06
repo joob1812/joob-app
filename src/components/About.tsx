@@ -36,7 +36,7 @@ function About() {
                 text-center flex flex-col
                 justify-center items-center
                 rounded-xl border border-gray-300
-                my-5 p-10 bg-gray-100/50 dark:bg-yellow-300/70"
+                my-5 p-10 bg-gray-100/50 dark:bg-gray-800"
                         >
                             <img
                                 src={Logo_SC}
@@ -58,7 +58,7 @@ function About() {
                             className="
                 text-center flex flex-col
                 justify-center items-center
-                rounded-xl border border-gray-300 my-5 p-10 bg-gray-100/50 dark:bg-yellow-300/70"
+                rounded-xl border border-gray-300 my-5 p-10 bg-gray-100/50 dark:bg-gray-800"
                         >
                             <img
                                 src={Logo_SC}
@@ -80,7 +80,7 @@ function About() {
                             className="
                 text-center flex flex-col
                 justify-center items-center
-                rounded-xl border border-gray-300 my-5 p-10 bg-gray-100/50 dark:bg-yellow-300/70"
+                rounded-xl border border-gray-300 my-5 p-10 bg-gray-100/50 dark:bg-gray-800"
                         >
                             <img
                                 src={Logo_SC}
@@ -102,7 +102,7 @@ function About() {
                             className="
                 text-center flex flex-col
                 justify-center items-center
-                rounded-xl border border-gray-300 my-5 p-10 bg-gray-100/50 dark:bg-yellow-300/70"
+                rounded-xl border border-gray-300 my-5 p-10 bg-gray-100/50 dark:bg-gray-800"
                         >
                             <img
                                 src={Logo_SC}

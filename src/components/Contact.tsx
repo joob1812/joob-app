@@ -1,8 +1,6 @@
 // src/components/Contact.tsx
 import { useForm, SubmitHandler } from 'react-hook-form'
 import emailjs from '@emailjs/browser'
-import ProfilePic from './ProfilePic'
-import ProgressBar from './ProgressBar'
 import Strings from '../shared/Strings'
 
 type FormInputs = {
@@ -53,44 +51,154 @@ function Contact() {
                             <input type="submit"
                                 className='block mt-2 border border-yellow-300
                        rounded-xl p-1 hover:bg-yellow-300 transition-all
-                        cursor-pointer bg-yellow-200 shadow-lg
+                        cursor-pointer bg-yellow-200 shadow-lg font-medium
                         dark:bg-yellow-300 dark:hover:bg-yellow-400' />
                         </form>
                     </div>
 
                     <div
-                        className="md:hidden mt-[70px]
-                text-center flex flex-col
+                        className="md:hidden mt-[70px] mb-[50px] px-24 mx-32                text-center flex flex-col
                 justify-center items-center
-                rounded-xl border border-gray-300 my- p-10 bg-gray-100/50 dark:bg-yellow-300/70"
+                rounded-xl border border-yellow-300 p-1 dark:bg-gray-800"
                     >
-                        <h3 className="text-lg font-medium pt-8 pb-2  dark:text-gray-900">INFORMATIONS PERSONELLES</h3>
-                        <p className="py-2  text-yellow-600 dark:text-yellow-50">
-                            {Strings.AN4}
-                        </p>
-                        <p className="py-1 text-yellow-900 font-serif dark:text-stone-800">
-                            {Strings.DIPLOME4}
-                        </p>
+                        <h3 className="text-lg font-bold pt-2 pb-2  dark:text-gray-100">
+                            {Strings.INFO}
+                        </h3>
+
+                        <div className='flex flex-col justify-center items-center'>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px]  dark:text-gray-200 font-medium">
+                                    PRENOM
+                                </p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+                            <p className="py-1 text-yellow-900 font-medium dark:text-yellow-300">
+                                {Strings.PRENOM}
+                            </p>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px]  dark:text-gray-200 font-medium">
+                                    NOM
+                                </p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+                            <p className="py-1 text-yellow-900 font-medium  dark:text-yellow-300">
+                                {Strings.NOM}
+                            </p>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px]  dark:text-gray-200 font-medium">
+                                    ADDRESSES
+                                </p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+                            <p className="py-1 text-yellow-900 font-medium  dark:text-yellow-300">
+                                {Strings.ADDPHYSIQUE1}
+                            </p>
+                            <p className="py-1 text-yellow-900 font-medium  dark:text-yellow-300">
+                                {Strings.ADDPHYSIQUE2}
+                            </p>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px]  dark:text-gray-200 font-medium">EMAIL</p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+
+                            <p className="py-1 text-yellow-900 font-medium  dark:text-yellow-300"><a href="mailto:joob.18.12@gmail.com">{Strings.ADDEMAIL}</a></p>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px]  dark:text-gray-200 font-medium">TELEPHONES</p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+                            <p className="py-1 text-yellow-900 font-medium  dark:text-yellow-300">{Strings.TEL1}</p>
+                            <p className="py-1 text-yellow-900 font-medium  dark:text-yellow-300">{Strings.TEL2}</p>
+                        </div>
                     </div>
 
                 </div>
-                <div className="hidden md:block mt-[120px]">
-                    
+                <div className="hidden mr-2 md:block md:mt-[140px] lg:mt-[120px] mt-[140px]">
+
                     <div
-                        className="mt-[120px]
+                        className="
                 text-center flex flex-col
                 justify-center items-center
-                rounded-xl border border-gray-300  p-1 bg-gray-100/50 dark:bg-yellow-300/70"
+                rounded-xl border border-yellow-300 lg:p-6 p-6 dark:bg-gray-800"
                     >
-                        <h3 className="text-lg font-medium pt-8 pb-2  dark:text-gray-900">
-                            INFORMATIONS PERSONELLES
+                        <h3 className="lg:text-2xl text-lg font-bold pb-4  dark:text-gray-100">
+                            {Strings.INFO}
                         </h3>
-                        <p className="py-2  text-yellow-600 dark:text-yellow-50">
-                            {Strings.AN4}
-                        </p>
-                        <p className="py-1 text-yellow-900 font-serif dark:text-stone-800">
-                            {Strings.DIPLOME4}
-                        </p>
+
+                        <div className='flex flex-col justify-center items-center'>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px] lg:text-[18px] dark:text-gray-200 font-medium">
+                                    PRENOM
+                                </p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+                            <p className="py-1 pb-4 lg:text-[20px] text-yellow-900 font-medium dark:text-yellow-300">
+                                {Strings.PRENOM}
+                            </p>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px] lg:text-[18px]  dark:text-gray-200 font-medium">
+                                    NOM
+                                </p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+                            <p className="py-1 pb-4 lg:text-[20px] text-yellow-900 font-medium  dark:text-yellow-300">
+                                {Strings.NOM}
+                            </p>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px] lg:text-[18px]  dark:text-gray-200 font-medium">
+                                    ADDRESSES
+                                </p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+                            <p className="py-1 lg:text-[20px] text-yellow-900 font-medium  dark:text-yellow-300">
+                                {Strings.ADDPHYSIQUE1}
+                            </p>
+                            <p className="py-1 pb-4 lg:text-[20px] text-yellow-900 font-medium  dark:text-yellow-300">
+                                {Strings.ADDPHYSIQUE2}
+                            </p>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px] lg:text-[18px]  dark:text-gray-200 font-medium">EMAIL</p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+
+                            <p className="py-1 pb-4 lg:text-[20px] text-yellow-900 font-medium  dark:text-yellow-300">
+                                <a href="mailto:joob.18.12@gmail.com">{Strings.ADDEMAIL}</a></p>
+                            <div className="flex items-center">
+                                <div className="w-[36px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <p className="text-[14px]  dark:text-gray-200 font-medium">TELEPHONES</p>
+                                <div className="w-full border-[1px] mx-1"></div>
+                                <div className="w-[36Px] h-[6px] bg-yellow-400 dark:bg-yellow-200 rounded-full"></div>
+                            </div>
+                            <p className="py-1 lg:text-[20px] text-yellow-900 font-medium  dark:text-yellow-300">{Strings.TEL1}</p>
+                            <p className="py-1 lg:text-[20px] text-yellow-900 font-medium  dark:text-yellow-300">{Strings.TEL2}</p>
+                        </div>
                     </div>
                 </div>
             </div>

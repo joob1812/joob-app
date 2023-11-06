@@ -21,5 +21,14 @@ export default {
 
     ETAB4: 'UNIVERSITE AMADOU MAHTAR MBOW DE DIAMNIADIO',
     AN4: '2020-2023',
-    DIPLOME4:'Licence Ingénieurie Informatique'
+    DIPLOME4: 'Licence Ingénieurie Informatique',
+    
+    INFO: 'INFORMATIONS PERSONELLES',
+    PRENOM: 'PAPE MOUSSA',
+    NOM: 'DIOP',
+    ADDPHYSIQUE1:'Diokoul/Khombole/Thiès',
+    ADDPHYSIQUE2:'Grand Standing/Thiès',
+    ADDEMAIL: 'joob.18.12@gmail.com',
+    TEL1: '784641763',
+    TEL2 : '704930131'
 }
